@@ -2,22 +2,6 @@ set nocompatible
 set t_Co=256
 set bg=dark
 set modeline
-so ~/.cs444/vim/autoload/plug.vim
-call plug#begin('~/.cs444/vim/plugged')
-" 80 line
-Plug 'vim-scripts/eighties.vim'
-Plug 'PreserveNoEOL'
-Plug 'vim-javascript'
-Plug 'vim-airline/vim-airline'
-Plug 'flazz/vim-colorschemes'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'nightsense/vimspectr'
-Plug 'tomlion/vim-solidity'
-Plug 'kien/ctrlp.vim'
-call plug#end()
-
-
-colorscheme angr
 
 set wildignore+=*.DS_Store
 set wildignore+=*.pyc
@@ -48,18 +32,10 @@ set sidescrolloff=10
 set splitbelow
 set splitright
 set title
-
-augroup colorcolumn
-  autocmd!
-  if exists('+colorcolumn')
-    set colorcolumn=81
-  else
-    autocmd BufWinEnter * let w:m2 = matchadd('ErrorMsg', '\%>80v.\+', -1)
-  endif
-augroup END
+syntax on
 
 " Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=blue guibg=red
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace //
@@ -126,33 +102,6 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
-" C, C++ compile & execute
-autocmd FileType c,cpp map <F5> :w<CR>:make %<CR>
-autocmd FileType c,cpp imap <F5> <ESC>:w<CR>:make %<CR>
-autocmd FileType c
-      \ if !filereadable('Makefile') && !filereadable('makefile') |
-      \   setlocal makeprg=gcc\ -o\ %< |
-      \ endif
-autocmd FileType cpp
-      \ if !filereadable('Makefile') && !filereadable('makefile') |
-      \   setlocal makeprg=g++\ -o\ %< |
-      \ endif
-if has('win32')
-  map <F6> :!%<.exe<CR>
-  imap <F6> <ESC>:!%<.exe<CR>
-elseif has('unix')
-  map <F6> :!./%<<CR>
-  imap <F6> <ESC>:!./%<<CR>
-endif
-
-" Python execute
-autocmd FileType python map <F5> :w<CR>:!python %<CR>
-autocmd FileType python imap <F5> <ESC>:w<CR>:!python %<CR>
-
-" Ruby execute
-autocmd FileType ruby map <F5> :w<CR>:!ruby %<CR>
-autocmd FileType ruby imap <F5> <ESC>:w<CR>:!ruby %<CR>
-
 " man page settings
 autocmd FileType c,cpp set keywordprg=man
 autocmd FileType ruby set keywordprg=ri
@@ -179,8 +128,3 @@ nmap <esc>OH 0
 nmap <esc>OF $
 imap <esc>OF <esc>$a
 cmap <esc>OF <end>
-
-" airline
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#tabline#enabled = 1

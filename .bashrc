@@ -10,7 +10,7 @@ shopt -s cdspell
 ##alias
 alias l='ls -h --color=auto'
 alias ll='ls -alh --colo=auto'
-alias ls='ls -h --color=auto'
+alias ls='ls -ah --color=auto'
 alias c='clear'
 alias .='cd ..'
 alias ..='cd ../..'
@@ -74,7 +74,7 @@ PS1="\[\e[1;38;5;226m\]\u\[\e[m\] "; # user
 PS1+="\[\e[1;91m\]::\[\e[m\] "; # double colon
 PS1+="\[\e[1;38;5;40m\]\w\[\e[m\] "; # Working Directory
 PS1+="\[\e[0m\][\[\e[1;38;5;231m\]\t\[\e[0m\]]\[\e[m\]"; # Time
-#PS1+=" \`parse_git_branch\`" # git status
+PS1+="\[\e[0m\]\[\e[0;1;38;5;202m\] \`parse_git_branch\`\[\e[m\]"; # git status
 PS1+="\n"
 PS1+=" \[\e[0;1;38;5;26m\]»\[\e[m\] \[\e0"; # arrow
 
@@ -85,3 +85,7 @@ export PS2;
 
 # start ssh-agent
 { eval `ssh-agent -s`&& ssh-add ~/.ssh/bitbucket; } &>/dev/null
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH

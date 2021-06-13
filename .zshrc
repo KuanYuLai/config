@@ -123,10 +123,19 @@ ${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS +1]} '%c' $THEME_DELIMITER '
 
 RPROMPT='[%*]'
 
-#Shortcut
+#alias
+alias l='ls -h --color=auto'
 alias ll='ls -alFG'
 alias ls='ls -GF'
 alias c='clear'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias .='cd ..'
+alias ..='cd ../..'
+alias ...='cd ../../..'
+alias rl='source ~/.zshrc'
+# git
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'

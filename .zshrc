@@ -149,5 +149,10 @@ alias rl='source ~/.zshrc'
 alias gc='git commit -m'
 # alias gp='git push'
 
+#Server
+alias tppa='ssh deploy@mtktppa'
+alias tproxy='ssh srv_tppa@mtkstppa'
+alias tredis='ssh deploy@mtkaiaio'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

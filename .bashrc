@@ -10,7 +10,7 @@ shopt -s cdspell
 ##alias
 alias l='ls -h --color=auto'
 alias ll='ls -alh --colo=auto'
-alias ls='ls -ah --color=auto'
+#alias ls='ls -ah --color=auto'
 alias c='clear'
 alias .='cd ..'
 alias ..='cd ../..'

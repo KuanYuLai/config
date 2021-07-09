@@ -2,6 +2,7 @@ set nocompatible
 set t_Co=256
 set bg=dark
 set modeline
+set relativenumber
 
 set wildignore+=*.DS_Store
 set wildignore+=*.pyc

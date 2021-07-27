@@ -81,6 +81,7 @@ plugins=(
 	npm
 	github
 	zsh-autosuggestions
+    zsh-syntax-highlighting
 	docker
 )
 
@@ -153,6 +154,11 @@ alias gc='git commit -m'
 alias tppa='ssh deploy@mtktppa'
 alias tproxy='ssh srv_tppa@mtkstppa'
 alias tredis='ssh deploy@mtkaiaio'
+
+# Golang
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

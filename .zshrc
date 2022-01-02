@@ -80,7 +80,6 @@ plugins=(
 	node
 	npm
 	github
-	zsh-autosuggestions
     zsh-syntax-highlighting
 	docker
 )
@@ -136,7 +135,7 @@ RPROMPT='[%*]'
 #alias
 alias l='ls -hG'
 alias ll='ls -alFG'
-alias ls='ls -GF'
+alias ls='ls -GF --color=auto'
 alias c='clear'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'

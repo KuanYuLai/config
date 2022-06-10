@@ -140,7 +140,6 @@ alias c='clear'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias rl='source ~/.zshrc'
@@ -154,6 +153,9 @@ alias tppa='ssh deploy@mtktppa'
 alias tproxy='ssh srv_tppa@mtkstppa'
 alias tredis='ssh deploy@mtkaiaio'
 
+#PTT
+alias ptt='ssh bbsu@ptt.cc'
+
 # Golang
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -163,4 +165,4 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #z command
- . ~/z/z.sh
+. ~/z/z.sh

@@ -44,7 +44,7 @@
     "slogin",
     "telnet"
   ],
-  "Scrollback Lines" : 1000,
+  "Scrollback Lines" : 0,
   "HotKey Window Reopens On Activation" : true,
   "Draw Powerline Glyphs" : true,
   "Flashing Bell" : false,
@@ -62,7 +62,7 @@
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "Unlimited Scrollback" : false,
+  "Unlimited Scrollback" : true,
   "Custom Command" : "No",
   "HotKey Key Code" : 34,
   "Keyboard Map" : {
@@ -355,7 +355,7 @@
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "HotKey Window Dock Click Action" : 2,
+  "HotKey Window Dock Click Action" : 1,
   "Default Bookmark" : "No",
   "Cursor Color" : {
     "Green Component" : 0.73333334922790527,
@@ -389,12 +389,13 @@
   },
   "Blur" : false,
   "Vertical Spacing" : 1,
-  "Normal Font" : "MesloLGS-NF-Regular 14",
+  "Normal Font" : "MesloLGS-NF-Regular 18",
   "Ansi 7 Color" : {
     "Green Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527,
     "Red Component" : 0.73333334922790527
   },
+  "Space" : -1,
   "HotKey Window AutoHides" : true,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
@@ -421,7 +422,8 @@
     "Blue Component" : 0,
     "Red Component" : 0
   },
-  "Screen" : -1,
+  "Screen" : -2,
+  "Initial Use Transparency" : false,
   "HotKey Characters Ignoring Modifiers" : "i",
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
@@ -434,7 +436,7 @@
 
   ],
   "Visual Bell" : true,
-  "Custom Directory" : "No",
+  "Custom Directory" : "Recycle",
   "Ansi 5 Color" : {
     "Green Component" : 0,
     "Blue Component" : 0.73333334922790527,

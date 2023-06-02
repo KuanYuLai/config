@@ -77,10 +77,6 @@ CASE_SENSITIVE="false"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	node
-	npm
-	github
-	docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,16 +116,16 @@ source $ZSH/oh-my-zsh.sh
 #DOUBLE_COLON="%{$fg_bold[blue]%}::%{$reset_color%}"
 
 # Load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
+# autoload -Uz vcs_info
+# precmd() { vcs_info }
 
 # Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats ' %F{143}[%b]%f'
+# zstyle ':vcs_info:git:*' formats ' %F{143}[%b]%f'
 
-PROMPT='
-${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS +1]} '%c'${vcs_info_msg_0_} $THEME_DELIMITER '
+# PROMPT='
+# ${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS +1]} '%c'${vcs_info_msg_0_} $THEME_DELIMITER '
 
-RPROMPT='[%*]'
+# RPROMPT='[%*]'
 
 #alias
 alias l='ls -hG'
@@ -142,26 +138,29 @@ alias fgrep='fgrep --color=auto'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias rl='source ~/.zshrc'
+
 # git
-# alias ga='git add .'
 alias gc='git commit -m'
-# alias gp='git push'
 
-#Server
-alias tppa='ssh deploy@mtktppa'
-alias tproxy='ssh srv_tppa@mtkstppa'
-alias tredis='ssh deploy@mtkaiaio'
-
-#PTT
+# PTT
 alias ptt='ssh bbsu@ptt.cc'
 
-# Golang
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+# brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #z command
-. ~/z/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
+
+# Golang
+# export GOROOT=/usr/local/go
+# export GOPATH=$HOME/go
+# export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/york.lai/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/york.lai/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/york.lai/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/york.lai/google-cloud-sdk/completion.zsh.inc'; fi

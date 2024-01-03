@@ -19,6 +19,9 @@ brew install --cask iterm2
 Setup profile:
 Import `York.json` to iTerm2
 
+Disable `Secure Keyboard Entry`:
+![secure_keyboard_input](images/secure_keyboard_entry.png)
+
 ## Setup zsh
 
 Install oh-my-zsh:

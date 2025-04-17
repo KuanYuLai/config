@@ -158,9 +158,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # export GOROOT=/usr/local/go
 # export GOPATH=$HOME/go
 # export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/york.lai/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/york.lai/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/york.lai/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/york.lai/google-cloud-sdk/completion.zsh.inc'; fi

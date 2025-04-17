@@ -62,8 +62,6 @@ stats \
 visual-studio-code \
 postman \
 docker \
-1password
-1password-cli \
 tableplus \
 redisInsight \
 altair-graphql-client
